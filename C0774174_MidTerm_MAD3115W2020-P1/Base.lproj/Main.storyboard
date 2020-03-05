@@ -29,14 +29,14 @@
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Email Here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ex-Ex-zsV">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ex-Ex-zsV">
                                 <rect key="frame" x="159" y="221" width="193" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password here" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-ss-93n">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-ss-93n">
                                 <rect key="frame" x="159" y="362" width="202" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,17 +59,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="5Wm-nc-UHw">
-                        <barButtonItem key="rightBarButtonItem" title="Sign in" id="G7V-qO-gjh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sign in" id="G7V-qO-gjh">
+                            <connections>
+                                <action selector="btnSignIn:" destination="BYZ-38-t0r" id="RxR-xU-BD9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtEmail" destination="8Ex-Ex-zsV" id="7Q0-bz-g6n"/>
+                        <outlet property="txtPassword" destination="SNn-ss-93n" id="eIR-p3-5en"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--Customer List Table View Controller-->
+        <!--Customer-->
         <scene sceneID="13v-ey-k7Y">
             <objects>
-                <viewController id="HSg-wz-zom" customClass="CustomerListTableViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" title="Customer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSg-wz-zom" customClass="CustomerListTableViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJe-BY-UWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w83-pX-w8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685" y="140"/>
+            <point key="canvasLocation" x="1814" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="et4-v6-Gy8">

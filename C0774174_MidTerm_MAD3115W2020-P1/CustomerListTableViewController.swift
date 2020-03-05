@@ -10,10 +10,31 @@ import UIKit
 
 class CustomerListTableViewController: UIViewController {
 
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        addLogoutButton()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    private func addLogoutButton()
+    {
+      
+      let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
+       
+      self.navigationItem.leftBarButtonItem = btnLogout
+    }
+    
+    @objc func logout()
+    {
+      self.navigationController?.popViewController(animated: true)
     }
     
 

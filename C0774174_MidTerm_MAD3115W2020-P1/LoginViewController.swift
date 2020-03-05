@@ -9,12 +9,36 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtEmail: UITextField!
+    
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    
+    @IBAction func btnSignIn(_ sender: UIBarButtonItem)
+    {
+        if txtEmail.text == "roop" && txtPassword.text == "roop"
+        {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+          let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
+           
+        self.navigationController?.pushViewController(secondVC, animated: true)
+        }
+        else
+        {
+           
+        }
+    }
+    
+    
 }
 
