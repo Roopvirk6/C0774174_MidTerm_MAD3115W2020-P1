@@ -66,6 +66,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="switchBtn" destination="G93-ZB-SaT" id="AP3-XS-1bE"/>
                         <outlet property="txtEmail" destination="8Ex-Ex-zsV" id="7Q0-bz-g6n"/>
                         <outlet property="txtPassword" destination="SNn-ss-93n" id="eIR-p3-5en"/>
                     </connections>
