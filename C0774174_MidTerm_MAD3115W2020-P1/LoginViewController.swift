@@ -22,7 +22,8 @@ class LoginViewController: UIViewController {
     
     
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
     }
@@ -39,7 +40,13 @@ class LoginViewController: UIViewController {
         }
         else
         {
-           
+           if sender.tag == 0 //show alert click
+                   {
+                   let alertController = UIAlertController(title: "Sign in failed", message:
+                       "Incorrect email or password", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "cancel", style: .cancel))
+                   self.present(alertController, animated: true, completion: nil)
+                   }
         }
     }
     
