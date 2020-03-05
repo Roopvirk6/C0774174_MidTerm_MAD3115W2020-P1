@@ -58,11 +58,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="5Wm-nc-UHw"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="5Wm-nc-UHw">
+                        <barButtonItem key="rightBarButtonItem" title="Sign in" id="G7V-qO-gjh"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Customer List Table View Controller-->
+        <scene sceneID="13v-ey-k7Y">
+            <objects>
+                <viewController id="HSg-wz-zom" customClass="CustomerListTableViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NJe-BY-UWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3WF-b2-T91"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w83-pX-w8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="et4-v6-Gy8">
