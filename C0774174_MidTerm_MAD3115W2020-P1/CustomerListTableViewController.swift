@@ -24,6 +24,19 @@ class CustomerListTableViewController: UIViewController {
     }
     
     
+    private func addNewCustomerButton()
+    {
+      let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
+      self.navigationItem.rightBarButtonItem = btnAdd
+    }
+    @objc func add()
+    {
+      let sb = UIStoryboard(name: "Main", bundle: nil)
+       let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
+       
+         self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
+    
     private func addLogoutButton()
     {
       
