@@ -19,6 +19,7 @@ class CustomerListTableViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         addLogoutButton()
+        addNewCustomerButton()
 
         // Do any additional setup after loading the view.
     }
@@ -32,7 +33,7 @@ class CustomerListTableViewController: UIViewController {
     @objc func add()
     {
       let sb = UIStoryboard(name: "Main", bundle: nil)
-       let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! NewCustomerViewController
+       let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! AddNewCustomerViewController
        
          self.navigationController?.pushViewController(thirdVC, animated: true)
     }

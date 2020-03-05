@@ -90,6 +90,21 @@
             </objects>
             <point key="canvasLocation" x="1814" y="131"/>
         </scene>
+        <!--Add New Customer View Controller-->
+        <scene sceneID="zDr-PK-F7S">
+            <objects>
+                <viewController storyboardIdentifier="thirdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ssl-js-w7N" customClass="AddNewCustomerViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kTg-48-eTh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jyS-8R-8PB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUH-Y5-ErB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2491" y="131"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="et4-v6-Gy8">
             <objects>
