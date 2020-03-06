@@ -21,12 +21,25 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtCustomerPhoneNumber: UITextField!
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        addSaveButton()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    private func addSaveButton()
+    {
+        let btnAdd1 = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save) )
+      self.navigationItem.rightBarButtonItem = btnAdd1
+    }
+    
+    
+    
+
+    
     
 
     /*

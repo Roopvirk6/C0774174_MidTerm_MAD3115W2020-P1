@@ -143,6 +143,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jyS-8R-8PB"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="txtCustomerEmail" destination="EJq-HN-Mf0" id="lU0-8A-cW2"/>
                         <outlet property="txtCustomerName" destination="Oer-Zf-fQV" id="TTs-Bx-sQN"/>
