@@ -18,6 +18,9 @@ class AddNewCustomerViewController: UIViewController {
     @IBOutlet weak var txtCustomerEmail: UITextField!
     
     
+    @IBOutlet weak var txtCustomerPhoneNumber: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -146,6 +146,7 @@
                     <connections>
                         <outlet property="txtCustomerEmail" destination="EJq-HN-Mf0" id="lU0-8A-cW2"/>
                         <outlet property="txtCustomerName" destination="Oer-Zf-fQV" id="TTs-Bx-sQN"/>
+                        <outlet property="txtCustomerPhoneNumber" destination="Zlf-Fu-m6Z" id="kUc-jQ-Nb0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUH-Y5-ErB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
