@@ -35,7 +35,12 @@ class AddNewCustomerViewController: UIViewController {
         let btnAdd1 = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save) )
       self.navigationItem.rightBarButtonItem = btnAdd1
     }
-    
+    @objc func save()
+    {
+      
+       
+         self.navigationController?.popViewController(animated: true)
+    }
     
     
 
