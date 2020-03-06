@@ -9,6 +9,14 @@
 import UIKit
 
 class AddNewCustomerViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtCustomerName: UITextField!
+    
+    
+    
+    @IBOutlet weak var txtCustomerEmail: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
