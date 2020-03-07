@@ -7,7 +7,22 @@
 //
 
 import Foundation
-class Customer
+public class Customer
 {
     
+      var customerId : Int
+      var firstName : String
+      var lastName : String
+      var emailId : String
+      // var billDictionary = [Int:Bill]()
+      // var totalBillAmount: Float = 0.0
+      
+      init(customerId: Int, firstName: String, lastName: String, emailId : String)
+      {
+        self.customerId = customerId
+        self.firstName = firstName
+        self.lastName = lastName
+        self.emailId = emailId
+         
+      }
 }
