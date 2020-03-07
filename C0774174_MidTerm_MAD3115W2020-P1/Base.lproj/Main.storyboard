@@ -82,7 +82,33 @@
                     <view key="view" contentMode="scaleToFill" id="NJe-BY-UWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="way-Rv-MvI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KzJ-wf-hkc">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KzJ-wf-hkc" id="sYi-Ng-A3r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HSg-wz-zom" id="TgN-o8-zfk"/>
+                                    <outlet property="delegate" destination="HSg-wz-zom" id="j5i-xm-nb2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="way-Rv-MvI" firstAttribute="leading" secondItem="3WF-b2-T91" secondAttribute="leading" id="Qq6-Cd-o4e"/>
+                            <constraint firstItem="3WF-b2-T91" firstAttribute="trailing" secondItem="way-Rv-MvI" secondAttribute="trailing" id="XBH-hC-KDv"/>
+                            <constraint firstItem="way-Rv-MvI" firstAttribute="top" secondItem="3WF-b2-T91" secondAttribute="top" id="bjM-7p-BgP"/>
+                            <constraint firstItem="3WF-b2-T91" firstAttribute="bottom" secondItem="way-Rv-MvI" secondAttribute="bottom" id="kuI-44-djR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3WF-b2-T91"/>
                     </view>
                 </viewController>
