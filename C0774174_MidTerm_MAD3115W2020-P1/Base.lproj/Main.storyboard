@@ -78,7 +78,7 @@
         <!--Customer-->
         <scene sceneID="13v-ey-k7Y">
             <objects>
-                <viewController storyboardIdentifier="customerListVC" title="Customer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSg-wz-zom" customClass="CustomerListTableViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" title="Customer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HSg-wz-zom" customClass="CustomerListTableViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJe-BY-UWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

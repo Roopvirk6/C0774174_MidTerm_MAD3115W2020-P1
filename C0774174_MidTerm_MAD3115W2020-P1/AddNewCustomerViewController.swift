@@ -41,11 +41,11 @@ class AddNewCustomerViewController: UIViewController {
          lastName = self.txtLastName.text
          email = self.txtEmail.text
        let sb1 = UIStoryboard(name: "Main", bundle: nil)
-          let customerListVC = sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
-         customerListVC.firstName = firstName
-         customerListVC.lastName = lastName
-         customerListVC.email = email
-       self.navigationController?.pushViewController(customerListVC, animated: true)
+          let secondVC = sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+         secondVC.firstName = firstName
+         secondVC.lastName = lastName
+         secondVC.email = email
+       self.navigationController?.pushViewController(secondVC, animated: true)
     
      }
 
