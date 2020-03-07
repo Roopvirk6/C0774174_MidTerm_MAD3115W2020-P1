@@ -6,33 +6,35 @@
 	<array>
 		<dict>
 			<key>Email</key>
-			<string>kritima</string>
+			<string>roop</string>
 			<key>Password</key>
-			<string>kritima@123</string>
-		</dict>
-		<dict>
-			<key>Email</key>
-			<string>anmol</string>
-			<key>Password</key>
-			<string>anmol@123</string>
-		</dict>
-		<dict>
-			<key>Email</key>
-			<string>aman</string>
-			<key>Password</key>
-			<string>aman@123</string>
+			<string>roop</string>
 		</dict>
 		<dict>
 			<key>Email</key>
 			<string>monica</string>
 			<key>Password</key>
-			<string>monica@123</string>
+			<string>monica</string>
+			<key>New item</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>Email</key>
-			<string>roop</string>
+			<string>aman</string>
 			<key>Password</key>
-			<string>roop@123</string>
+			<string>aman</string>
+		</dict>
+		<dict>
+			<key>Email</key>
+			<string>anmol</string>
+			<key>Password</key>
+			<string>anmol</string>
+		</dict>
+		<dict>
+			<key>Email</key>
+			<string>kritima</string>
+			<key>Password</key>
+			<string>kritima</string>
 		</dict>
 	</array>
 </dict>

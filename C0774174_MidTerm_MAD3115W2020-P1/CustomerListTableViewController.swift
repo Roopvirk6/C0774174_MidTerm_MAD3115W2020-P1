@@ -16,6 +16,7 @@ class CustomerListTableViewController: UIViewController {
     var firstName: String!
     var lastName: String!
     var email: String!
+    var customerCell : [Customer] = []
     
     
     
@@ -25,8 +26,14 @@ class CustomerListTableViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         addLogoutButton()
         addNewCustomerButton()
+        customerCell = DataStorage.getInstance().getAllCustomers()
+        
 
         // Do any additional setup after loading the view.
+    }
+    func loadCustomers()
+    {
+        customerCell.append(Customer(customerId: 1, firstName: "roop", lastName: "virk", emailId: "roop@gmail"))
     }
     
     
@@ -68,23 +75,35 @@ class CustomerListTableViewController: UIViewController {
     */
 
 }
-extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate
+{
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  {
+    return customerCell.count
+  }
+   
+  func tableView(in tableview: UITableView) -> Int
+  {
     return 1
   }
    
-  func tableView(in tableview: UITableView) -> Int {
-    return 1
-  }
-   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
-      // let customer = customerArray[indexPath.row]
+  func tableView(_ tblCustomer: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    let cell = tblCustomer.dequeueReusableCell(withIdentifier: "customerCell")
+      let customer = customerCell[indexPath.row]
     
-    cell?.textLabel?.text = firstName
-    cell?.detailTextLabel?.text = lastName
+    cell?.textLabel?.text = customer.firstName
+    cell?.detailTextLabel?.text = customer.lastName
+    cell?.textLabel?.text = customer.emailId
     
        return cell!
   }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let c = customerCell[indexPath.row]
+        print(c)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100.0)
+    }
    
 }

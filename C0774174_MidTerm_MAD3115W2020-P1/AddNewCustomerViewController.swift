@@ -27,7 +27,7 @@ class AddNewCustomerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
        
 
         // Do any additional setup after loading the view.
@@ -37,11 +37,12 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBAction func btnbutton(_ sender: UIBarButtonItem)
     {
-         firstName = self.txtFirstName.text
+        firstName = self.txtFirstName.text
+         
          lastName = self.txtLastName.text
          email = self.txtEmail.text
-       let sb1 = UIStoryboard(name: "Main", bundle: nil)
-          let secondVC = sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+       let sb = UIStoryboard(name: "Main", bundle: nil)
+          let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
          secondVC.firstName = firstName
          secondVC.lastName = lastName
          secondVC.email = email

@@ -15,9 +15,9 @@
 		9B01B41C2411A73200EE1BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B01B41A2411A73200EE1BFD /* LaunchScreen.storyboard */; };
 		9B01B4242411B01700EE1BFD /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */; };
 		9B01B4262411BD5F00EE1BFD /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */; };
-		9B1A17B324131ACD00AC254D /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A17B224131ACD00AC254D /* UserInfo.plist */; };
 		9B1A17B52413259700AC254D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A17B42413259700AC254D /* Customer.swift */; };
 		9B1A17B7241325F700AC254D /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A17B6241325F700AC254D /* DataStorage.swift */; };
+		9B1E06BD241458BB0089CC09 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B1E06BC241458BB0089CC09 /* Users.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		9B01B41D2411A73200EE1BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
-		9B1A17B224131ACD00AC254D /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 		9B1A17B42413259700AC254D /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9B1A17B6241325F700AC254D /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		9B1E06BC241458BB0089CC09 /* Users.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +75,9 @@
 				9B01B41D2411A73200EE1BFD /* Info.plist */,
 				9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */,
 				9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */,
-				9B1A17B224131ACD00AC254D /* UserInfo.plist */,
 				9B1A17B42413259700AC254D /* Customer.swift */,
 				9B1A17B6241325F700AC254D /* DataStorage.swift */,
+				9B1E06BC241458BB0089CC09 /* Users.plist */,
 			);
 			path = "C0774174_MidTerm_MAD3115W2020-P1";
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 				9B01B41C2411A73200EE1BFD /* LaunchScreen.storyboard in Resources */,
 				9B01B4192411A73200EE1BFD /* Assets.xcassets in Resources */,
 				9B01B4172411A72F00EE1BFD /* Main.storyboard in Resources */,
-				9B1A17B324131ACD00AC254D /* UserInfo.plist in Resources */,
+				9B1E06BD241458BB0089CC09 /* Users.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

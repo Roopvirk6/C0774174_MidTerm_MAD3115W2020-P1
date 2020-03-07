@@ -181,6 +181,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="Zlf-Fu-m6Z" id="vs0-hS-ILe"/>
+                        <outlet property="txtFirstName" destination="Oer-Zf-fQV" id="cfF-KT-d2c"/>
+                        <outlet property="txtLastName" destination="EJq-HN-Mf0" id="c4i-E6-dOO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUH-Y5-ErB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
