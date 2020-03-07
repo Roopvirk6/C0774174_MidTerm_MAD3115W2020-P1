@@ -16,6 +16,7 @@
 		9B01B4242411B01700EE1BFD /* CustomerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */; };
 		9B01B4262411BD5F00EE1BFD /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */; };
 		9B1A17B324131ACD00AC254D /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A17B224131ACD00AC254D /* UserInfo.plist */; };
+		9B1A17B52413259700AC254D /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A17B42413259700AC254D /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTableViewController.swift; sourceTree = "<group>"; };
 		9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		9B1A17B224131ACD00AC254D /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
+		9B1A17B42413259700AC254D /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				9B01B4232411B01700EE1BFD /* CustomerListTableViewController.swift */,
 				9B01B4252411BD5F00EE1BFD /* AddNewCustomerViewController.swift */,
 				9B1A17B224131ACD00AC254D /* UserInfo.plist */,
+				9B1A17B42413259700AC254D /* Customer.swift */,
 			);
 			path = "C0774174_MidTerm_MAD3115W2020-P1";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				9B01B4142411A72F00EE1BFD /* LoginViewController.swift in Sources */,
 				9B01B4242411B01700EE1BFD /* CustomerListTableViewController.swift in Sources */,
 				9B01B4262411BD5F00EE1BFD /* AddNewCustomerViewController.swift in Sources */,
+				9B1A17B52413259700AC254D /* Customer.swift in Sources */,
 				9B01B4102411A72F00EE1BFD /* AppDelegate.swift in Sources */,
 				9B01B4122411A72F00EE1BFD /* SceneDelegate.swift in Sources */,
 			);
