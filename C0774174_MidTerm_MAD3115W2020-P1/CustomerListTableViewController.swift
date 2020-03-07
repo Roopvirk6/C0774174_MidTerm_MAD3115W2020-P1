@@ -9,8 +9,13 @@
 import UIKit
 
 class CustomerListTableViewController: UIViewController {
-
     
+    
+    @IBOutlet weak var tblCustomer: UITableView!
+    
+    var firstName: String!
+    var lastName: String!
+    var email: String!
     
     
     
@@ -62,4 +67,24 @@ class CustomerListTableViewController: UIViewController {
     }
     */
 
+}
+extension CustomerListTableViewController: UITableViewDataSource, UITableViewDelegate{
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1
+  }
+   
+  func tableView(in tableview: UITableView) -> Int {
+    return 1
+  }
+   
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
+      // let customer = customerArray[indexPath.row]
+    
+    cell?.textLabel?.text = firstName
+    cell?.detailTextLabel?.text = lastName
+    
+       return cell!
+  }
+   
 }

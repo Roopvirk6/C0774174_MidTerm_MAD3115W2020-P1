@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        readPlist()
+        
         
     }
 
@@ -38,6 +38,19 @@ class LoginViewController: UIViewController {
           let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
            
         self.navigationController?.pushViewController(secondVC, animated: true)
+            
+            if(switchBtn.isOn)
+            {
+              UserDefaults.standard.set(txtEmail.text, forKey: "email")
+             
+              UserDefaults.standard.set(txtPassword.text, forKey: "password")
+            }
+            else
+            {
+              UserDefaults.standard.removeObject(forKey: "email")
+               
+              UserDefaults.standard.removeObject(forKey: "password")
+            }
         }
         else
         {
@@ -51,38 +64,7 @@ class LoginViewController: UIViewController {
            
         }
     }
-    func readPlist()
-    {
-        
-        if  let bundlePath = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
-            {
-                
-                if let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-                {
-                    if let userList = dictionary["Customer"] as? [[String: String]]
-                    {
-                        var flag = false
-                        for user in userList
-                        {
-                            if user["Email"] == "roop" && user["Password"] == "roop@123"
-                            {
-                                flag = true
-                            }
-                        }
-                        if flag == true
-                        {
-                            print("valid user")
-                        }
-                        else
-                        {
-                            print("invalid user")
-                        }
-                    }
-                }
-            }
-
-        }
-
+    
     
 }
 

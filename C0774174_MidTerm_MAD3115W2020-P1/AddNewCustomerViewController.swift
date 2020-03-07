@@ -11,38 +11,43 @@ import UIKit
 class AddNewCustomerViewController: UIViewController {
     
     
-    @IBOutlet weak var txtCustomerName: UITextField!
+    @IBOutlet weak var txtFirstName: UITextField!
     
     
     
-    @IBOutlet weak var txtCustomerEmail: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
     
     
-    @IBOutlet weak var txtCustomerPhoneNumber: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    var firstName: String!
+    var lastName: String!
+    var email: String!
+    var cust: Customer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        addSaveButton()
+       
 
         // Do any additional setup after loading the view.
     }
     
+
     
-    private func addSaveButton()
+    @IBAction func btnbutton(_ sender: UIBarButtonItem)
     {
-        let btnAdd1 = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save) )
-      self.navigationItem.rightBarButtonItem = btnAdd1
-    }
-    @objc func save()
-    {
-      
-       
-         self.navigationController?.popViewController(animated: true)
-    }
+         firstName = self.txtFirstName.text
+         lastName = self.txtLastName.text
+         email = self.txtEmail.text
+       let sb1 = UIStoryboard(name: "Main", bundle: nil)
+          let customerListVC = sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
+         customerListVC.firstName = firstName
+         customerListVC.lastName = lastName
+         customerListVC.email = email
+       self.navigationController?.pushViewController(customerListVC, animated: true)
     
-    
+     }
 
     
     
