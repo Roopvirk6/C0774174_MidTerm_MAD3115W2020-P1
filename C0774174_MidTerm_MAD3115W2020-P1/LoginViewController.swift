@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        readPlist()
         
     }
 
@@ -50,7 +51,38 @@ class LoginViewController: UIViewController {
            
         }
     }
-    
+    func readPlist()
+    {
+        
+        if  let bundlePath = Bundle.main.path(forResource: "UserInfo", ofType: "plist")
+            {
+                
+                if let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+                {
+                    if let userList = dictionary["Customer"] as? [[String: String]]
+                    {
+                        var flag = false
+                        for user in userList
+                        {
+                            if user["Email"] == "abc" && user["Password"] == "abc@123"
+                            {
+                                flag = true
+                            }
+                        }
+                        if flag == true
+                        {
+                            print("valid user")
+                        }
+                        else
+                        {
+                            print("invalid user")
+                        }
+                    }
+                }
+            }
+
+        }
+
     
 }
 

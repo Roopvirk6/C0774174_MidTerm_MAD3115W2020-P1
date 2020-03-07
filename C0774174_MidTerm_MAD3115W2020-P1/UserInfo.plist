@@ -8,31 +8,31 @@
 			<key>Email</key>
 			<string>kritima</string>
 			<key>Password</key>
-			<string>kritima</string>
+			<string>kritima@123</string>
 		</dict>
 		<dict>
 			<key>Email</key>
 			<string>anmol</string>
 			<key>Password</key>
-			<string>anmol</string>
+			<string>anmol@123</string>
 		</dict>
 		<dict>
 			<key>Email</key>
 			<string>aman</string>
 			<key>Password</key>
-			<string>aman</string>
+			<string>aman@123</string>
 		</dict>
 		<dict>
 			<key>Email</key>
 			<string>monica</string>
 			<key>Password</key>
-			<string>monica</string>
+			<string>monica@123</string>
 		</dict>
 		<dict>
 			<key>Email</key>
 			<string>roop</string>
 			<key>Password</key>
-			<string>roop</string>
+			<string>roop@123</string>
 		</dict>
 	</array>
 </dict>
