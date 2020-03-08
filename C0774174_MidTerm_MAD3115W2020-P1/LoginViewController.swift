@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
                 var flag = false
                 for user in customers{
             
-                    if user["email"] == txtEmail.text && user["password"] == txtPassword.text
+                    if user["Email"] == txtEmail.text && user["Password"] == txtPassword.text
                     {
                        
                         flag = true
