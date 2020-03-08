@@ -29,8 +29,8 @@ class DataStorage
      
     func loadData()
     {
-      customerArray.append(Customer(customerId: 1, firstName: "roop", lastName: "virk", emailId: "roopvirk@gmail.com"))
-        customerArray.append(Customer(customerId: 2, firstName: "aman", lastName: "kaur", emailId: "aman@gmail.com"))
+        customerArray.append(Customer(customerID: 1, customerFName: "roop", customerLName: "virk", customerEmail: "roopvirk@gmail.com"))
+        customerArray.append(Customer(customerID: 2, customerFName: "aman", customerLName: "kaur", customerEmail: "aman@gmail.com"))
         
           
     }

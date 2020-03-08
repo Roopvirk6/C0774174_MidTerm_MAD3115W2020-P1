@@ -10,6 +10,8 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
     
+    let a = Singleton.getInstance()
+    
     
     @IBOutlet weak var txtFirstName: UITextField!
     
@@ -27,6 +29,7 @@ class AddNewCustomerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveCustomerButton()
         //self.navigationItem.hidesBackButton = true
        
 
@@ -35,21 +38,35 @@ class AddNewCustomerViewController: UIViewController {
     
 
     
-    @IBAction func btnbutton(_ sender: UIBarButtonItem)
+    //@IBAction func btnbutton(_ sender: UIBarButtonItem)
+    private func saveCustomerButton()
     {
-        firstName = self.txtFirstName.text
-         
-         lastName = self.txtLastName.text
-         email = self.txtEmail.text
-       let sb = UIStoryboard(name: "Main", bundle: nil)
-          let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
-         secondVC.firstName = firstName
-         secondVC.lastName = lastName
-         secondVC.email = email
-       self.navigationController?.pushViewController(secondVC, animated: true)
+     let btnSave=UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(AddNewCustomerViewController.saveCustomer(sender:)))
+        
+        navigationItem.rightBarButtonItem=btnSave
+    }
+    @objc
+    func saveCustomer(sender: UIBarButtonItem)
+    {
+        //print("Customer Added")
+     let sb1=UIStoryboard(name: "Main", bundle: nil)
+     let secondVC = sb1.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
     
-     }
+      let fName = txtFirstName.text
+          let lName = txtLastName.text
+          
+       
+                     let email = txtEmail.text
+                     a.addNewCustomer(First_Name: fName!, Last_Name: lName!, email: email!)
+                     
+                     let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
 
+                  alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.popViewController(animated: true)}))
+                     
+                  
+                     self.present(alert, animated: true)
+          
+      }
     
     
 

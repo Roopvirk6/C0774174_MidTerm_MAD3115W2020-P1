@@ -31,40 +31,44 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func btnSignIn(_ sender: UIBarButtonItem)
-    {
-        if txtEmail.text == "roop" && txtPassword.text == "roop"
+   {
+     if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist")
+     {
+        if let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
         {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-          let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
-           
-        self.navigationController?.pushViewController(secondVC, animated: true)
+            if let customers = dictionary["Customer"] as? [[String:String]]
+            {
+               // print(customers)
+                var flag = false
+                for user in customers{
             
-            if(switchBtn.isOn)
-            {
-              UserDefaults.standard.set(txtEmail.text, forKey: "email")
-             
-              UserDefaults.standard.set(txtPassword.text, forKey: "password")
+                    if user["email"] == txtEmail.text && user["password"] == txtPassword.text
+                    {
+                       
+                        flag = true
+                    }}
+                         if flag == true{
+                                           print("Valid user")
+                             let sb = UIStoryboard(name: "Main", bundle: nil)
+                            
+                                                    let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
+                            
+                                                    self.navigationController?.pushViewController(secondVC, animated: true)
+                                       }
+                                       else{
+                                           print("Invalid user")
+                            let alertController = UIAlertController(title: "Login Failed", message:"Incorrect Email or Password", preferredStyle: .alert)
+
+                                                   alertController.addAction(UIAlertAction(title: "Try Again", style: .cancel))
+
+                                                   self.present(alertController, animated: true, completion: nil)
+                                       }
+                }
+   
+                }
             }
-            else
-            {
-              UserDefaults.standard.removeObject(forKey: "email")
-               
-              UserDefaults.standard.removeObject(forKey: "password")
-            }
-        }
-        else
-        {
-           if sender.tag == 0 //show alert click
-                   {
-                   let alertController = UIAlertController(title: "Sign in failed", message:
-                       "Incorrect email or password", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "cancel", style: .cancel))
-                   self.present(alertController, animated: true, completion: nil)
-                   }
-           
+    
         }
     }
-    
-    
-}
+
 
