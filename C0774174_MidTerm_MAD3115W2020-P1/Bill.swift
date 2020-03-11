@@ -9,6 +9,8 @@
 import Foundation
 class Bill : IDisplay
 {
+    
+    
     var billId : Int
     var billDate : String
     enum biTypes: String {

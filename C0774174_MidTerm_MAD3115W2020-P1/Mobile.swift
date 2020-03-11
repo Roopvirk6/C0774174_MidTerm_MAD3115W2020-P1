@@ -27,6 +27,21 @@ class Mobile : Bill
         super.init(billId: billId, billDate: billDate, billType: billType)
     }
     
+    override func display()
+    {
+        print("*****************************")
+        print("       Bill Details      ")
+        print("*****************************")
+        print("Bill ID : \(billId)")
+        print("BillDate : \(billDate)")
+        print("Bill Type : \(billType)")
+        print("Manufacturer Name : \(manufacturerName)")
+        print("Plan Name : \(planName)")
+        print("Minutes Used : \(minutesUsed)")
+        print("Internet Used : \(internetUsed)")
+        print("Bill Amount : $\(billAmount)")
+        
+    }
     
     
     
