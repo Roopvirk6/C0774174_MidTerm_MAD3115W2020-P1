@@ -9,5 +9,17 @@
 import Foundation
 class Bill
 {
-    
+    var billId : Int
+    var billDate : String
+    enum biTypes: String {
+        case Internet
+        case Mobile
+        case Hydro
+    }
+    var billType : biTypes
+    init(billId : Int , billDate : String, billType : biTypes) {
+        self.billId = billId
+        self.billDate = billDate
+        self.billType = billType
+    }
 }
