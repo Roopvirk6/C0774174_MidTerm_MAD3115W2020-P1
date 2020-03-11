@@ -11,7 +11,7 @@ import Foundation
 
 class Singleton: NSObject
 {
-     private var customerDictionary  = [Int:Customer]()
+    private var customerDictionary  = [Int:Customer]()
     
     private static var obj = Singleton()
     

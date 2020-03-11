@@ -24,6 +24,7 @@
 		9B61B270241999D000E629A0 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B26F241999D000E629A0 /* Hydro.swift */; };
 		9B61B27224199B1B00E629A0 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B27124199B1B00E629A0 /* Mobile.swift */; };
 		9B61B27424199CE300E629A0 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B27324199CE300E629A0 /* Internet.swift */; };
+		9B61B2772419A5A100E629A0 /* Stringtoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B2762419A5A100E629A0 /* Stringtoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9B61B26F241999D000E629A0 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		9B61B27124199B1B00E629A0 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		9B61B27324199CE300E629A0 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		9B61B2762419A5A100E629A0 /* Stringtoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stringtoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		9B01B40E2411A72F00EE1BFD /* C0774174_MidTerm_MAD3115W2020-P1 */ = {
 			isa = PBXGroup;
 			children = (
+				9B61B2752419A56600E629A0 /* Extensions */,
 				9B01B40F2411A72F00EE1BFD /* AppDelegate.swift */,
 				9B01B4112411A72F00EE1BFD /* SceneDelegate.swift */,
 				9B01B4132411A72F00EE1BFD /* LoginViewController.swift */,
@@ -98,6 +101,14 @@
 				9B61B27324199CE300E629A0 /* Internet.swift */,
 			);
 			path = "C0774174_MidTerm_MAD3115W2020-P1";
+			sourceTree = "<group>";
+		};
+		9B61B2752419A56600E629A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B61B2762419A5A100E629A0 /* Stringtoint.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				9B1A17B52413259700AC254D /* Customer.swift in Sources */,
 				9B01B4102411A72F00EE1BFD /* AppDelegate.swift in Sources */,
 				9B1E06BF24146B810089CC09 /* Singleton.swift in Sources */,
+				9B61B2772419A5A100E629A0 /* Stringtoint.swift in Sources */,
 				9B61B270241999D000E629A0 /* Hydro.swift in Sources */,
 				9B1A17B7241325F700AC254D /* DataStorage.swift in Sources */,
 				9B61B26C2419983600E629A0 /* Bill.swift in Sources */,
