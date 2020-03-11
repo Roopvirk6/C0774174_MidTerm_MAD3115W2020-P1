@@ -17,11 +17,16 @@ class Customer
     }
       var customerEmail: String
     
-    init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String) {
+    var billDictionary = Dictionary<Int, Bill>()
+    
+    init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String, billDictionary : Dictionary<Int, Bill>) {
         self.customerID=customerID
         self.customerFName=customerFName
         self.customerLName=customerLName
         self.customerEmail=customerEmail
+        self.billDictionary = billDictionary
     }
+    
+    
 }
 
