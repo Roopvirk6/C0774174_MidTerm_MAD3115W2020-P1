@@ -16,4 +16,18 @@ class Mobile : Bill
      var internetUsed : Float
      var billAmount : Float
     
+    
+    init(manufacturerName:String, planName:String, internetUsed:Float, minutesUsed:Int, billAmount:Float, billId : Int, billType : biTypes, billDate: String) {
+        self.manufacturerName = manufacturerName
+        self.planName = planName
+        
+        self.internetUsed = internetUsed
+        self.minutesUsed = minutesUsed
+        self.billAmount = billAmount
+        super.init(billId: billId, billDate: billDate, billType: billType)
+    }
+    
+    
+    
+    
 }
