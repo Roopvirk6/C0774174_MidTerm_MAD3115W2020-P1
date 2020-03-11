@@ -9,5 +9,15 @@
 import Foundation
 class Internet : Bill
 {
+    var providerName : String
+    var gbUsed : Float
+    var billAmount : Float
+   init(providerName : String, gbUsed : Float, billAmount : Float, billId: Int, billDate: String, billType: biTypes) {
+        self.providerName = providerName
+        self.gbUsed = gbUsed
+        self.billAmount = billAmount
+        super.init(billId: billId, billDate: billDate, billType: billType)
+
+    }
     
 }
