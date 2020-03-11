@@ -24,4 +24,8 @@ class Bill : IDisplay
         self.billDate = billDate
         self.billType = billType
     }
+    func display()
+    {
+        
+    }
 }
