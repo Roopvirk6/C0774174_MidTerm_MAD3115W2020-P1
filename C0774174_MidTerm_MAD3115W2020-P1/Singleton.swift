@@ -57,6 +57,8 @@ class Singleton: NSObject
     let c1 = Customer(customerID: 1, customerFName: "Monika", customerLName: "Sharma", customerEmail: "ms@gmail.com ")
         AddCustomer(customer: c1)
         
+     let i1 = Internet(providerName: "Rogers", gbUsed: 500, billAmount: 56.0, billId: 1, billDate: "Wednesday, 19 June, 2019", billType: .Internet)
+        
         let c2 = Customer(customerID: 2, customerFName: "IKROOP", customerLName: "Virk", customerEmail: "ikroopb@gmail.com ")
         AddCustomer(customer: c2)
     }
