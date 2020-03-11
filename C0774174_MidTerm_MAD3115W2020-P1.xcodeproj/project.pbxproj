@@ -22,6 +22,7 @@
 		9B61B26C2419983600E629A0 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B26B2419983600E629A0 /* Bill.swift */; };
 		9B61B26E2419998A00E629A0 /* IDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B26D2419998A00E629A0 /* IDisplay.swift */; };
 		9B61B270241999D000E629A0 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B26F241999D000E629A0 /* Hydro.swift */; };
+		9B61B27224199B1B00E629A0 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61B27124199B1B00E629A0 /* Mobile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9B61B26B2419983600E629A0 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9B61B26D2419998A00E629A0 /* IDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDisplay.swift; sourceTree = "<group>"; };
 		9B61B26F241999D000E629A0 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
+		9B61B27124199B1B00E629A0 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				9B61B26B2419983600E629A0 /* Bill.swift */,
 				9B61B26D2419998A00E629A0 /* IDisplay.swift */,
 				9B61B26F241999D000E629A0 /* Hydro.swift */,
+				9B61B27124199B1B00E629A0 /* Mobile.swift */,
 			);
 			path = "C0774174_MidTerm_MAD3115W2020-P1";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				9B01B4142411A72F00EE1BFD /* LoginViewController.swift in Sources */,
 				9B01B4242411B01700EE1BFD /* CustomerListTableViewController.swift in Sources */,
 				9B01B4262411BD5F00EE1BFD /* AddNewCustomerViewController.swift in Sources */,
+				9B61B27224199B1B00E629A0 /* Mobile.swift in Sources */,
 				9B1A17B52413259700AC254D /* Customer.swift in Sources */,
 				9B01B4102411A72F00EE1BFD /* AppDelegate.swift in Sources */,
 				9B1E06BF24146B810089CC09 /* Singleton.swift in Sources */,
