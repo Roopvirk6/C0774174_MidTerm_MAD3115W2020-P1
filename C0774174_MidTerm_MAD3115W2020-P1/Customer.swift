@@ -26,7 +26,26 @@ class Customer
         self.customerEmail=customerEmail
         self.billDictionary = billDictionary
     }
-    
+    init(customerID : Int, customerFName : String, customerLName : String, customerEmail : String){
+        self.customerID = customerID
+        self.customerFName = customerFName
+        self.customerLName = customerLName
+        self.customerEmail = customerEmail
+    }
+    func addBill(Bill : Bill)
+    {
+        billDictionary.updateValue(Bill, forKey: Bill.billId)
+    }
+
+    func returnBillArray() -> Array<Bill>
+    {
+        var t : Array<Bill> = []
+        for i in billDictionary.values
+        {
+            t.append(i)
+        }
+        return t
+    }
     
     
 }
