@@ -105,13 +105,10 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Main", bundle: nil)
-            
-            let BillViewController = vc.instantiateViewController(withIdentifier: "BillViewController") as! BillViewController
-          
-        BillViewController.c = tempvar.returnCustObject(custID: indexPath.row+1)
-        self.navigationController?.pushViewController(BillViewController, animated: true)
-            
+      let sb = UIStoryboard(name: "Main", bundle: nil)
+      let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! BillViewController
+      
+       self.navigationController?.pushViewController(fourthVC, animated: true)
     }
     
     
