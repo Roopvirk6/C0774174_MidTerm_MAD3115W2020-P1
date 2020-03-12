@@ -240,6 +240,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add Bill" id="LyN-tl-Ky4">
                             <connections>
                                 <action selector="addBill:" destination="1hL-rZ-V3m" id="gzm-kD-PqG"/>
+                                <segue destination="d0g-1M-iuR" kind="show" id="Xlx-zp-8Az"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -254,6 +255,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqt-JR-b6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2733.3333333333335" y="831.69642857142856"/>
+        </scene>
+        <!--New Bill-->
+        <scene sceneID="bmJ-4S-uW4">
+            <objects>
+                <viewController id="d0g-1M-iuR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bUy-Hm-26v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CaN-8e-8WH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Bill" id="uGa-dP-np0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncm-rq-et7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3548" y="832"/>
         </scene>
         <!--Add New Customer View Controller-->
         <scene sceneID="zDr-PK-F7S">
