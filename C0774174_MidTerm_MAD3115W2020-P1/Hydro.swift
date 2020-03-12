@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class HydroBill: Bill{
+class Hydro: Bill{
     
     
     var agencyName : String
@@ -15,11 +15,11 @@ class HydroBill: Bill{
     var billAmount : Float
     
     
-    init(billID : Int , billDate : String, billType : biTypes, agencyName : String, unitConsumed : Int , billAmount : Float) {
+    init(billId : Int , billDate : String, billType : biTypes, agencyName : String, unitConsumed : Int , billAmount : Float) {
         self.agencyName = agencyName
         self.unitConsumed = unitConsumed
         self.billAmount = billAmount
-        super.init(billId : billID, billDate : billDate, billType : billType)
+        super.init(billId : billId, billDate : billDate, billType : billType)
         
     }
     
