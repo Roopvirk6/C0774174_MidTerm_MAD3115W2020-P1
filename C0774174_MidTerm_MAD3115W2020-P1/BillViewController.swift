@@ -11,6 +11,11 @@ import UIKit
 class BillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     
+    static var email = String()
+    static var firstName = String()
+    static var lastName = String()
+    var tempDic:Dictionary<Int,Bill> = [:]
+    
     
     @IBOutlet weak var custDetails: UILabel!
     
@@ -28,6 +33,11 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
       var cust : Customer?=nil
        
         override func viewDidLoad() {
+            
+            
+            custDetailsName.text = BillViewController.firstName
+            custDetailsEmail.text = BillViewController.lastName
+            custDetails.text = BillViewController.email
            
           if cust != nil
           {
