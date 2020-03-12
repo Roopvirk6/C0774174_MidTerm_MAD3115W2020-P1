@@ -39,7 +39,7 @@ class Singleton: NSObject
         
         var c = Customer(customerID: cId, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
         self.AddCustomer(customer: c)
-        addCustomerToDictionary(c: c)
+        //addCustomerToDictionary(c: c)
         print(c.customerFName)
         
         

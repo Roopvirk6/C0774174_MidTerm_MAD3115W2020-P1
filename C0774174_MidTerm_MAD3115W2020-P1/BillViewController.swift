@@ -15,7 +15,10 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
     static var firstName = String()
     static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
+    let cellId = print(String(describing: BillTableViewCell.self))
+
     
+    @IBOutlet weak var imgView: UIImageView!
     
     @IBOutlet weak var custDetails: UILabel!
     
@@ -35,9 +38,9 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         override func viewDidLoad() {
             
             
-            custDetailsName.text = BillViewController.firstName
-            custDetailsEmail.text = BillViewController.lastName
-            custDetails.text = BillViewController.email
+            custDetailsName.text = BillViewController.lastName
+            custDetailsEmail.text = BillViewController.email
+            custDetails.text = BillViewController.firstName
            
           if cust != nil
           {
@@ -61,10 +64,13 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
          
         let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
          
-        tblCell.textLabel?.text = t1?.customerFName
+        //tblCell.textLabel?.text = t1?.customerFName
         return tblCell
       }
       
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(180.0)
+    }
     }
     /*
     // MARK: - Navigation
