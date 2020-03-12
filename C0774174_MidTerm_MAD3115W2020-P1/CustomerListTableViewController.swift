@@ -37,6 +37,7 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
         navigationItem.hidesBackButton=true
         addLogoutButton()
         addNewCustomerButton()
+        tempvar.createCust()
         
        
         
@@ -101,6 +102,22 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
       func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
           return "List of Customers"
       }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Main", bundle: nil)
+            
+            let BillViewController = vc.instantiateViewController(withIdentifier: "BillViewController") as! BillViewController
+          
+        BillViewController.c = tempvar.returnCustObject(custID: indexPath.row+1)
+        self.navigationController?.pushViewController(BillViewController, animated: true)
+            
+    }
+    
+    
+    
+    
+    
       
       override func viewWillAppear(_ animated: Bool) {
              tblCustomer.reloadData()
