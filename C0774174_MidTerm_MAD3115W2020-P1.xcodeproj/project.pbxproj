@@ -29,7 +29,7 @@
 		9BB0AD5D241AB90D007EE971 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0AD5C241AB90D007EE971 /* BillViewController.swift */; };
 		9BB0AD61241AC5F1007EE971 /* extensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0AD60241AC5F1007EE971 /* extensionInt.swift */; };
 		9BB0AD65241AC699007EE971 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0AD64241AC699007EE971 /* BillTableViewCell.swift */; };
-		9BB0AD69241AF3B3007EE971 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0AD68241AF3B3007EE971 /* NewBillViewController.swift */; };
+		9BB0AD6B241AF56E007EE971 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0AD6A241AF56E007EE971 /* NewBillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		9BB0AD5C241AB90D007EE971 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		9BB0AD60241AC5F1007EE971 /* extensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionInt.swift; sourceTree = "<group>"; };
 		9BB0AD64241AC699007EE971 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
-		9BB0AD68241AF3B3007EE971 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
+		9BB0AD6A241AF56E007EE971 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				9B61B27324199CE300E629A0 /* Internet.swift */,
 				9BB0AD5C241AB90D007EE971 /* BillViewController.swift */,
 				9BB0AD64241AC699007EE971 /* BillTableViewCell.swift */,
-				9BB0AD68241AF3B3007EE971 /* NewBillViewController.swift */,
+				9BB0AD6A241AF56E007EE971 /* NewBillViewController.swift */,
 			);
 			path = "C0774174_MidTerm_MAD3115W2020-P1";
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				9B01B4142411A72F00EE1BFD /* LoginViewController.swift in Sources */,
 				9B01B4242411B01700EE1BFD /* CustomerListTableViewController.swift in Sources */,
 				9B01B4262411BD5F00EE1BFD /* AddNewCustomerViewController.swift in Sources */,
-				9BB0AD69241AF3B3007EE971 /* NewBillViewController.swift in Sources */,
+				9BB0AD6B241AF56E007EE971 /* NewBillViewController.swift in Sources */,
 				9B61B27224199B1B00E629A0 /* Mobile.swift in Sources */,
 				9BB0AD65241AC699007EE971 /* BillTableViewCell.swift in Sources */,
 				9B1A17B52413259700AC254D /* Customer.swift in Sources */,

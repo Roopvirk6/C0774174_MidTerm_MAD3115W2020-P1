@@ -237,7 +237,7 @@
                         <viewLayoutGuide key="safeArea" id="QyC-AE-6NB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bills" id="CWZ-43-AgO">
-                        <barButtonItem key="rightBarButtonItem" title="Add Bill" id="LyN-tl-Ky4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LyN-tl-Ky4">
                             <connections>
                                 <action selector="addBill:" destination="1hL-rZ-V3m" id="gzm-kD-PqG"/>
                                 <segue destination="d0g-1M-iuR" kind="show" id="Xlx-zp-8Az"/>
@@ -259,7 +259,7 @@
         <!--New Bill-->
         <scene sceneID="bmJ-4S-uW4">
             <objects>
-                <viewController id="d0g-1M-iuR" sceneMemberID="viewController">
+                <viewController id="d0g-1M-iuR" customClass="NewBillViewController" customModule="C0774174_MidTerm_MAD3115W2020_P1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUy-Hm-26v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,12 +304,27 @@
                                 <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="d0g-1M-iuR" id="p5I-vN-fHh"/>
+                                </connections>
                             </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdf-vI-PHg">
+                                <rect key="frame" x="0.0" y="369" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CaN-8e-8WH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Bill" id="uGa-dP-np0"/>
+                    <navigationItem key="navigationItem" title="New Bill" id="uGa-dP-np0">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="5oa-aP-wth"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="billDate" destination="ZkP-qu-Ye6" id="Bcg-gq-as7"/>
+                        <outlet property="billId" destination="yoR-3f-JOw" id="Cfe-Cx-Uxo"/>
+                        <outlet property="billType" destination="BLn-zL-toc" id="2ZH-Xs-Jl2"/>
+                        <outlet property="pickerType" destination="gdf-vI-PHg" id="lYm-lo-nDd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncm-rq-et7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
