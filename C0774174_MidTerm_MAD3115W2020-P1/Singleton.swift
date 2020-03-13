@@ -76,11 +76,14 @@ class Singleton: NSObject
         
         let c2 = Customer(customerID: 2, customerFName: "IKROOP", customerLName: "Virk", customerEmail: "ikroopb@gmail.com ")
         AddCustomer(customer: c2)
+        let c3 = Customer(customerID: 3, customerFName: "AMAN", customerLName: "Kaur", customerEmail: "amankaur@gmail.com ")
+        AddCustomer(customer: c2)
+        
         
         
         addCustomerToDictionary(c: c1)
         addCustomerToDictionary(c: c2)
-        //addCustomerToDictionary(c: c3)
+        addCustomerToDictionary(c: c3)
     }
     
     
