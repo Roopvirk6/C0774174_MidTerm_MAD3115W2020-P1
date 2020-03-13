@@ -12,35 +12,41 @@ class NewBillViewController: UIViewController, UITextFieldDelegate, UIPickerView
 {
     
     
-    let pickerTypes = ["Hydro", "Internet" , "Mobile"]
+    @IBOutlet weak var label1: UILabel!
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.pickerTypes.count
-    }
+    @IBOutlet weak var label2: UILabel!
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
-    {
-        
-            return Array(self.pickerTypes)[row]
-        
-        
-    }
-
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        let row1 = pickerType.selectedRow(inComponent: 0)
-        
-        
-        let v1 = Array(self.pickerTypes)[row]
-        
-        
-        billType.text = "\(v1)"
-        
-    }
+    
+    @IBOutlet weak var label3: UILabel!
+    
+    
+    
+    @IBOutlet weak var label4: UILabel!
+    
+    
+    @IBOutlet weak var label5: UILabel!
+    
+    
+    
+    @IBOutlet weak var txtField1: UITextField!
+    
+    
+    @IBOutlet weak var txtField2: UITextField!
+    
+    
+    @IBOutlet weak var txtField3: UITextField!
+    
+    
+    @IBOutlet weak var txtField4: UITextField!
+    
+    
+    
+    @IBOutlet weak var txtField5: UITextField!
+    
+    
+    let pickerTypes = ["Mobile", "Internet", "Hydro"]
+    
     
     
     
@@ -56,7 +62,20 @@ class NewBillViewController: UIViewController, UITextFieldDelegate, UIPickerView
     
     @IBOutlet weak var billDate: UITextField!
     
+    
+    @IBOutlet weak var billAmount: UITextField!
+    
+    
     var datePicker : UIDatePicker!
+    
+    
+    @IBAction func saveBtn(_ sender: UIBarButtonItem)
+    {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+         let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! BillViewController
+         
+        self.navigationController?.pushViewController(billListVC, animated: true)
+    }
     
     
     
@@ -110,6 +129,82 @@ class NewBillViewController: UIViewController, UITextFieldDelegate, UIPickerView
 
     
     
+//let pickerTypes = ["Hydro", "Internet" , "Mobile"]
+
+func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+}
+
+func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return self.pickerTypes.count
+}
+
+func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+{
+    
+        return Array(self.pickerTypes)[row]
+    
+    
+}
+
+func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+{
+    let row1 = pickerType.selectedRow(inComponent: 0)
+    
+    
+    let v1 = Array(self.pickerTypes)[row]
+    
+    
+    billType.text = "\(v1)"
+    
+      switch row1
+      {
+      case 0:
+        self.billType.text = "Mobile"
+        self.label1.isHidden = false
+        self.txtField1.isHidden = false
+        self.label2.isHidden = false
+        self.txtField2.isHidden = false
+        self.label3.isHidden = false
+        self.txtField3.isHidden = false
+        self.label4.isHidden = false
+        self.txtField4.isHidden = false
+        self.label5.isHidden = false
+        self.txtField5.isHidden = false
+        self.label1.text = "Manufacturer Name:"
+        self.label2.text = "Plan Name:"
+        self.label3.text = "Mobile Number:"
+        self.label4.text = "Internet Gb:"
+        self.label5.text = "Minutes"
+         
+      case 1:
+        self.billType.text = "Internet"
+        self.label1.text = "Provider Name:"
+        self.label2.text = "Internet GB:"
+        self.label3.isHidden = true
+        self.txtField3.isHidden = true
+        self.label4.isHidden = true
+        self.txtField4.isHidden = true
+        self.label5.isHidden = true
+        self.txtField5.isHidden = true
+      case 2:
+        self.billType.text = "Hydro"
+        self.label1.text = "Agency Name:"
+        self.label2.text = "Units Consumed:"
+        self.label3.isHidden = true
+        self.txtField3.isHidden = true
+        self.label4.isHidden = true
+        self.txtField4.isHidden = true
+        self.label5.isHidden = true
+        self.txtField5.isHidden = true
+      default:
+        self.billType.text = ""
+      }
+    }
+
+    
+    
+}
 
     /*
     // MARK: - Navigation
@@ -121,4 +216,4 @@ class NewBillViewController: UIViewController, UITextFieldDelegate, UIPickerView
     }
     */
 
-}
+

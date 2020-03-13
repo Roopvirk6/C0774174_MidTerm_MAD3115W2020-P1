@@ -13,6 +13,8 @@ class Singleton: NSObject
 {
     private var customerDictionary  = [Int:Customer]()
     
+    private var billDictionary = [Int:Bill]()
+    
     private static var obj = Singleton()
     
     
@@ -44,6 +46,8 @@ class Singleton: NSObject
         
         
     }
+    
+    
     
     func returnCustObject(custID : Int) -> Customer?
     {
