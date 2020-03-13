@@ -73,8 +73,15 @@ class NewBillViewController: UIViewController, UITextFieldDelegate, UIPickerView
     {
         let sb = UIStoryboard(name: "Main", bundle: nil)
          let billListVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! BillViewController
-         
-        self.navigationController?.pushViewController(billListVC, animated: true)
+//
+//        self.navigationController?.pushViewController(billListVC, animated: true)
+        
+        let alert = UIAlertController(title: "Success", message: "Congrats! Added Successfully", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in self.navigationController?.pushViewController(billListVC, animated: true)}))
+           
+        
+           self.present(alert, animated: true)
     }
     
     
