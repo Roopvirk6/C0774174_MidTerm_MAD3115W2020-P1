@@ -60,18 +60,24 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
        
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          
-        let t1 = tempvar.returnCustObject(custID: Int(indexPath.row+1))
+        let t1 = tempvar.returnBillObject(biID: Int(indexPath.row+1))
          
         let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
+        
+        
+           
          
         //tblCell.textLabel?.text = t1?.customerFName
         return tblCell
       }
+    
+    
       
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(180.0)
     }
-    }
+}
+    
     /*
     // MARK: - Navigation
 

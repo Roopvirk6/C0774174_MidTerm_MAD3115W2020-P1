@@ -106,10 +106,12 @@ class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
-      
+        
+     
       BillViewController.firstName = x?.customerFName ?? ""
      BillViewController.lastName = x?.customerLName ?? ""
         BillViewController.email = x?.customerEmail ?? ""
+        
         
         
         
