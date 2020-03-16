@@ -6,26 +6,28 @@
 //  Copyright © 2020 MacStudent. All rights reserved.
 //
 
+
 import Foundation
-class Bill : IDisplay
+
+enum billTypes: String {
+    case Mobile = "Mobile"
+    case Internet = "Internet"
+    case Hydro = "Hydro"
+}
+
+class Bill
 {
+    var Id: Int
+    var billDate: Date
+    var billType: billTypes
+    var totalBillAmount: Float
     
     
-    var billId : Int
-    var billDate : String
-    enum biTypes: String {
-        case Internet
-        case Mobile
-        case Hydro
-    }
-    var billType : biTypes
-    init(billId : Int , billDate : String, billType : biTypes) {
-        self.billId = billId
+    init(Id: Int, billDate: Date, billType: billTypes, totalBillAmount: Float)
+    {
+        self.Id = Id
         self.billDate = billDate
         self.billType = billType
-    }
-    func display()
-    {
-        
+        self.totalBillAmount = totalBillAmount
     }
 }

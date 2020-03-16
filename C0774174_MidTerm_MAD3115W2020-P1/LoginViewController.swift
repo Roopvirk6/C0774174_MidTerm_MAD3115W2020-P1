@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let getdata = Singleton.getInstance()
+                      getdata.createCust()
         
         
     }
@@ -51,7 +53,7 @@ class LoginViewController: UIViewController {
                                            print("Valid user")
                              let sb = UIStoryboard(name: "Main", bundle: nil)
                             
-                                                    let secondVC = sb.instantiateViewController(identifier: "secondVC") as! CustomerListTableViewController
+                                                    let secondVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListTableViewController
                             
                                                     self.navigationController?.pushViewController(secondVC, animated: true)
                                        }

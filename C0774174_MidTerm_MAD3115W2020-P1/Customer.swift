@@ -5,52 +5,44 @@
 //  Created by MacStudent on 2020-03-06.
 //  Copyright © 2020 MacStudent. All rights reserved.
 //
-
 import Foundation
 class Customer
 {
-    var customerID : Int
-    var customerFName: String
-    var customerLName : String
-    var fullName : String
-    {
-        return customerFName + " " + customerLName
+    var customerID : Int?
+    var customerFName: String?
+    var customerLName : String?
+    var fullName : String{
+        return customerFName! + " " + customerLName!
     }
-      var customerEmail: String
+    var total : String{return String(TotalAmountToPay)}
     
-    var billDictionary = Dictionary<Int, Bill>()
     
-    init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String, billDictionary : Dictionary<Int, Bill>)
+      var customerEmail: String?
+    
+  
+    
+  var billDictionary = [Int:Bill]()
+    
+    var TotalAmountToPay: Float // computed variable
     {
+        var TotalAmount: Float = 0.0
+        
+        for bill in billDictionary
+        {
+            TotalAmount = TotalAmount + bill.value.totalBillAmount
+        }
+        return TotalAmount
+    }
+    func addBill(Bill : Bill)
+    {
+        billDictionary.updateValue(Bill, forKey: Bill.Id)
+    }
+    
+    init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String) {
         self.customerID=customerID
         self.customerFName=customerFName
         self.customerLName=customerLName
         self.customerEmail=customerEmail
-        self.billDictionary = billDictionary
     }
-    
-    init(customerID : Int, customerFName : String, customerLName : String, customerEmail : String)
-    {
-        self.customerID = customerID
-        self.customerFName = customerFName
-        self.customerLName = customerLName
-        self.customerEmail = customerEmail
-    }
-    func addBill(Bill : Bill)
-    {
-        billDictionary.updateValue(Bill, forKey: Bill.billId)
-    }
-
-    func returnBillArray() -> Array<Bill>
-    {
-        var t : Array<Bill> = []
-        for i in billDictionary.values
-        {
-            t.append(i)
-        }
-        return t
-    }
-    
-    
 }
 

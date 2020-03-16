@@ -8,128 +8,84 @@
 
 import UIKit
 
-class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    @IBOutlet weak var tblCustomer: UITableView!
-    
-    var firstName: String!
-    var lastName: String!
-    var email: String!
-    var customerCell : [Customer] = []
-    
-    
-    var tempvar = Singleton.getInstance()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let getdata = Singleton.getInstance()
-        getdata.createCust()
-          tblCustomer.delegate=self
-          tblCustomer.dataSource=self
-        navigationItem.hidesBackButton=true
-        addLogoutButton()
-        addNewCustomerButton()
-        tempvar.createCust()
-        
-       
-        
-
-        // Do any additional setup after loading the view.
-    }
-    
-    
-    
-    private func addNewCustomerButton()
-    {
-      let btnAdd = UIBarButtonItem(image: UIImage(systemName: "plus") , style: .plain, target: self, action: #selector(self.add))
-      self.navigationItem.rightBarButtonItem = btnAdd
-    }
-    @objc func add()
-    {
-      let sb = UIStoryboard(name: "Main", bundle: nil)
-       let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! AddNewCustomerViewController
-       
-         self.navigationController?.pushViewController(thirdVC, animated: true)
-    }
+class CustomerListTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     private func addLogoutButton()
     {
-      
-      let btnLogout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
-       
-      self.navigationItem.leftBarButtonItem = btnLogout
+        let btnLogout=UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(CustomerListTableViewController.logout(sender:)))
+        
+        navigationItem.leftBarButtonItem=btnLogout
     }
     
-    @objc func logout()
+    @objc
+    func logout(sender: UIBarButtonItem)
     {
-        self.navigationController?.popToRootViewController(animated: true)
-      
+        print("logout")
+        navigationController?.popViewController(animated: true)
     }
     
+    private func addCustomerButton()
+       {
+        let btnLogout=UIBarButtonItem(title: "ADD", style: .done, target: self, action: #selector(CustomerListTableViewController.addCustomer(sender:)))
+           
+           navigationItem.rightBarButtonItem=btnLogout
+       }
+       
+       @objc
+       func addCustomer(sender: UIBarButtonItem)
+       {
+           //print("Customer Added")
+        let sb1=UIStoryboard(name: "Main", bundle: nil)
+        let addCustomerVC=sb1.instantiateViewController(identifier: "addCustomerVC") as! AddNewCustomerViewController
+        navigationController?.pushViewController(addCustomerVC, animated: true)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    func numberOfSections(in tableView: UITableView) -> Int {
-          return 1
-      }
-      
-      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          return tempvar.returnCount()
-      }
-      
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-      {
-          let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
-          let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
-          cell.textLabel?.text = x?.fullName
-           return cell
-      }
-      func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-          return "List of Customers"
-      }
+       }
+  var tempvar = Singleton.getInstance()
     
+    @IBOutlet weak var customerListTable: UITableView!
+   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        customerListTable.delegate=self
+        customerListTable.dataSource=self
+      navigationItem.hidesBackButton=true
+      
+         addLogoutButton()
+        addCustomerButton()
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
-        
-     
-      BillViewController.firstName = x?.customerFName ?? ""
-     BillViewController.lastName = x?.customerLName ?? ""
-        BillViewController.email = x?.customerEmail ?? ""
-        
-        
-        
-        
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-      let fourthVC = sb.instantiateViewController(identifier: "ShowBillDetailsVC") as! BillViewController
-      
-       self.navigationController?.pushViewController(fourthVC, animated: true)
+         let sb1=UIStoryboard(name: "Main", bundle: nil)
+               let detailsVC=sb1.instantiateViewController(identifier: "detailsVC") as! CustomerDetailsViewController
+        detailsVC.custdetails=tempvar.returnCustObject(custID: indexPath.row+1)!
+               navigationController?.pushViewController(detailsVC, animated: true)
     }
     
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return tempvar.returnCount()
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let x = tempvar.returnCustObject(custID: Int(indexPath.row+1))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
+        cell.textLabel?.text = x?.fullName
+         return cell
+    }
     
-      
-      override func viewWillAppear(_ animated: Bool) {
-             tblCustomer.reloadData()
-             
-         }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "List of Customers"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           customerListTable.reloadData()
+           
+       }
+    
 }
 

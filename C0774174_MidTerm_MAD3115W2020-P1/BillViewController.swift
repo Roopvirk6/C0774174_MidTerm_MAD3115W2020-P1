@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
-{
+//class BillViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+//{
     
-    static var email = String()
+ /*   static var email = String()
     static var firstName = String()
     static var lastName = String()
     var tempDic:Dictionary<Int,Bill> = [:]
@@ -60,7 +60,7 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
        
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          
-        let t1 = tempvar.returnBillObject(biID: Int(indexPath.row+1))
+        let t1 = tempvar.re(biID: Int(indexPath.row+1))
          
         let tblCell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath)
         
@@ -87,5 +87,6 @@ class BillViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
     }
     */
+*/
 
 

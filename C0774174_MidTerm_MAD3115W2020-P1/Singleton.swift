@@ -11,9 +11,7 @@ import Foundation
 
 class Singleton: NSObject
 {
-    private var customerDictionary  = [Int:Customer]()
-    
-    private var billDictionary = [Int:Bill]()
+     private var customerDictionary  = [Int:Customer]()
     
     private static var obj = Singleton()
     
@@ -27,48 +25,13 @@ class Singleton: NSObject
         return obj
     }
     
-    func addCustomerToDictionary(c: Customer) {
-        customerDictionary.updateValue(c, forKey: c.customerID)
-    }
-    
-   func addBillToDictionary(b: Bill)
-   {
-    billDictionary.updateValue(b, forKey: b.billId)
-   }
-    func addNewBill(billDate : String, billType : Bill.biTypes)
-    {
-        let dId = billDictionary.count + 1
-        var d = Bill(billId: dId, billDate: billDate, billType: billType)
-        self.AddBill(bill: d)
-        print(d.billId)
-    }
-    
-    
     func addNewCustomer(First_Name : String, Last_Name : String, email : String)
     {
-        let cId = customerDictionary.count + 1
+        let c = customerDictionary.count + 1
         
-        var c = Customer(customerID: cId, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
-        self.AddCustomer(customer: c)
-        //addCustomerToDictionary(c: c)
-        print(c.customerFName)
-        
-        
+        let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
+        self.AddCustomer(customer: temp)
     }
-    
-    func returnBillObject(biID : Int) -> Bill?
-    {
-        for (k,v) in billDictionary
-        {
-            if biID == k
-            {
-                return v
-            }
-        }
-        return nil
-        
-    }
-    
     
     func returnCustObject(custID : Int) -> Customer?
     {
@@ -86,61 +49,54 @@ class Singleton: NSObject
     func returnCount() -> Int
     {
         return customerDictionary.count
-        
     }
     
     func createCust()
     {
+        let b1: Mobile = Mobile(Id: 1, billDate: Date(), billType: billTypes.Mobile, totalBillAmount: 74.52, mobileManufacturer: "Samsung S10", planName: "Talk + Data", mobileNumber: "+12345678901", internetUsed: 23, minuteUsed: 34)
+        let b2: Mobile = Mobile(Id: 2, billDate: Date(), billType: billTypes.Mobile, totalBillAmount: 34.98, mobileManufacturer: "LG", planName: "LTE+3G 9.5GB Promo plan", mobileNumber: "+14567431985", internetUsed: 67, minuteUsed: 456)
         
-    let c1 = Customer(customerID: 1, customerFName: "Monika", customerLName: "Sharma", customerEmail: "ms@gmail.com ")
+        let b3: Internet = Internet(Id: 1, billDate: Date(), billType: billTypes.Internet, totalBillAmount: 23.09, providerName: "Bell", internetUsed: 34)
+        let b4: Internet = Internet(Id: 2, billDate: Date(), billType: billTypes.Internet, totalBillAmount: 236.09, providerName: "Rogers", internetUsed: 765)
+        
+        let b5: Hydro = Hydro(Id: 1, billDate: Date(), billType: billTypes.Hydro, totalBillAmount: 765.98, agencyName: "Planet Energy", unitconsumed: 56)
+        let b6: Hydro = Hydro(Id: 2, billDate: Date(), billType: billTypes.Hydro, totalBillAmount: 476.8, agencyName: "Energizer", unitconsumed: 98)
+        
+    let c1 = Customer(customerID: 1, customerFName: "Roop", customerLName: "Virk", customerEmail: "roop@gmail.com ")
         AddCustomer(customer: c1)
+        c1.addBill(Bill: b1)
+        c1.addBill(Bill: b4)
         
-     let i1 = Internet(providerName: "Rogers", gbUsed: 500, billAmount: 56.0, billId: 1, billDate: "Wednesday, 19 June, 2019", billType: .Internet)
-        AddBill(bill: i1)
-        let m1 = Mobile(manufacturerName: "galaxy", planName: "prepaid", internetUsed: 10, minutesUsed: 356, billAmount: 500, billId: 2, billType: .Mobile, billDate: "Wednesday, 19 June, 2019")
-        AddBill(bill: m1)
-        let h1 = Hydro(billId: 3, billDate: "Wednesday, 19 June, 2019", billType: .Hydro, agencyName:  "hydro canada", unitConsumed: 34, billAmount: 678)
-        AddBill(bill: h1)
-        let c2 = Customer(customerID: 2, customerFName: "IKROOP", customerLName: "Virk", customerEmail: "ikroopb@gmail.com ")
+        let c2 = Customer(customerID: 2, customerFName: "Monika", customerLName: "Sharma", customerEmail: "monika@gmail.com ")
         AddCustomer(customer: c2)
-        let c3 = Customer(customerID: 3, customerFName: "AMAN", customerLName: "Kaur", customerEmail: "amankaur@gmail.com ")
-        AddCustomer(customer: c2)
+        c2.addBill(Bill: b1)
+        c2.addBill(Bill: b2)
+        c2.addBill(Bill: b6)
+        
+    
+        let c3 = Customer(customerID: 3, customerFName: "Aman", customerLName: "Kaur", customerEmail: "amankaur@gmail.com ")
+        AddCustomer(customer: c3)
+
+        
+        c3.addBill(Bill: b6)
+        let c4 = Customer(customerID: 4, customerFName: "Anmol", customerLName: "Singh", customerEmail: "anmol@gmail.com ")
+        AddCustomer(customer: c4)
+        c3.addBill(Bill: b2)
+        c4.addBill(Bill: b5)
         
         
         
-        addCustomerToDictionary(c: c1)
-        addCustomerToDictionary(c: c2)
-        addCustomerToDictionary(c: c3)
-        addBillToDictionary(b: i1)
-        addBillToDictionary(b: m1)
-        addBillToDictionary(b: h1)
+        
+        
+        
         
     }
-    
-    
 
-    
     func AddCustomer(customer: Customer)
     {
-        customerDictionary.updateValue(customer, forKey: customer.customerID)
+        customerDictionary.updateValue(customer, forKey: customer.customerID!)
     }
-    func AddBill(bill : Bill)
-    {
-        billDictionary.updateValue(bill, forKey: bill.billId)
-    }
-    
-    
-    func printdata()
-    {
-        for i in customerDictionary.values
-        {
-            print(i.customerFName)
-        }
-        for n in billDictionary.values
-        {
-            print(n.billType)
-        }
-    }
+
     
 
 }
